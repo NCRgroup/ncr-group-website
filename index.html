@@ -7,16 +7,24 @@
   <style>
     .banner {
       display: flex;
-      justify-content: flex-end;
+      /* Flex items will grow to fill available space */
+      flex-grow: 1;  
       align-items: center;
       padding: 1rem 2rem;
       background-color: #0f053e;
-      color: white; 
+      color: white;
+    }
+
+    .banner-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      /* Force text to occupy available space on the left */
+      flex: 1;
     }
 
     /* Button Styles */
     .banner-button {
-      background-color: #0f053e;
+      background-color: #0f053e; /* Inherit background color from banner */
       border: none;
       padding: 10px 20px;
       text-align: center;
